@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["ExampleApplication.csproj", "."]
-RUN dotnet restore "./ExampleApplication.csproj"
+COPY ["HomeListsHelper.csproj", "."]
+RUN dotnet restore "./HomeListsHelper.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "ExampleApplication.csproj" -c Release -o /app/build
+RUN dotnet build "HomeListsHelper.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "ExampleApplication.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "HomeListsHelper.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ExampleApplication.dll"]
+ENTRYPOINT ["dotnet", "HomeListsHelper.dll"]

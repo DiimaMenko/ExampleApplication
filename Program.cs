@@ -1,4 +1,4 @@
-using ExampleApplication.Data;
+using HomeListsHelper.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 

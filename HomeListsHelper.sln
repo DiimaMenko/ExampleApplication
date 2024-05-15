@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleApplication", "ExampleApplication.csproj", "{F2D52F44-18CC-4DB9-8661-B69F3639857B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeListsHelper", "HomeListsHelper.csproj", "{F2D52F44-18CC-4DB9-8661-B69F3639857B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
