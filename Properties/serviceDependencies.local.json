@@ -1,17 +1,18 @@
 {
   "dependencies": {
-    "secrets1": {
-      "secretStore": null,
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/HomeListsHelpervault",
-      "type": "secrets.keyVault",
-      "connectionId": "KeyVaultConnection"
-    },
     "mssql1": {
       "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ServiceLinker/locations/westus/connectors/ConnectionStringsHLHDatabaseConnection_7140740234",
       "secretStore": "AzureKeyVault",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/hlh-dbserver/databases/HLHDB",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:HLHDatabaseConnection"
+    },
+    "secrets1": {
+      "secretStore": null,
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/HomeListsHelpervault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri",
+      "dynamicId": null
     }
   }
 }
