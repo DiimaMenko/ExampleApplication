@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using HomeListsHelper.Models;
 
-namespace ExampleApplication.Data
+namespace HomeListsHelper.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -9,5 +10,6 @@ namespace ExampleApplication.Data
             : base(options)
         {
         }
+        public DbSet<HomeListsHelper.Models.ProductItem>? ProductItem { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "ExampleApplication": {
+    "HomeListsHelper": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
