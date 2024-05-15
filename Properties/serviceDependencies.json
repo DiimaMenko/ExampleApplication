@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "secrets1": {
+      "type": "secrets",
+      "connectionId": "KeyVaultConnection"
+    },
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:DefaultConnection"
+      "connectionId": "ConnectionStrings:HLHDatabaseConnection"
     }
   }
 }

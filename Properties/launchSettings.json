@@ -4,7 +4,9 @@
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "KeyVaultConnection": "https://homelistshelpervault.vault.azure.net/",
+        "AZURE_USERNAME": "diimamenko@gmail.com"
       },
       "dotnetRunMessages": true,
       "applicationUrl": "https://localhost:7238;http://localhost:5128"
@@ -13,7 +15,9 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "KeyVaultConnection": "https://homelistshelpervault.vault.azure.net/",
+        "AZURE_USERNAME": "diimamenko@gmail.com"
       }
     },
     "Docker": {
@@ -21,7 +25,9 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "environmentVariables": {
-        "ASPNETCORE_URLS": "https://+:443;http://+:80"
+        "ASPNETCORE_URLS": "https://+:443;http://+:80",
+        "KeyVaultConnection": "https://homelistshelpervault.vault.azure.net/",
+        "AZURE_USERNAME": "diimamenko@gmail.com"
       },
       "publishAllPorts": true,
       "useSSL": true
