@@ -11,5 +11,9 @@ namespace HomeListsHelper.Data
         {
         }
         public DbSet<HomeListsHelper.Models.ProductItem>? ProductItem { get; set; }
+
+        public DbSet<HomeListsHelper.Models.Category>? Category { get; set; }
+
+        public DbSet<HomeListsHelper.Models.ItemsList> ItemsLists { get; set; }
     }
 }
