@@ -12,7 +12,12 @@ In the long run, it is planned also to create an API. This will allow us to:
   - create a desktop app
   - create widgets
 
-Other features that are in mind and can be developed later.
+Other features are in mind and can be developed later.
   - Add AI to recognize items from the list (for example, fridge content) and mark all the items that are missed. The main use case is to make regular shopping sessions more comfortable.
   - Add specific calculators, like a calorie calculator.
   - Add automatic parameters set from typical values or maybe AI recognition.
+
+
+# As For now
+Only the initial steps were done. It is around 1% of work.
+I would appreciate any ideas to help me improve this product.
