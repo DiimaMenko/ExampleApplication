@@ -1,0 +1,47 @@
+name: Trigger auto deployment for homelistshelper-app-202405161505
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ master ]
+    paths:
+    - '**'
+    - '.github/workflows/homelistshelper-app-202405161505-AutoDeployTrigger-fa90aea8-78e7-482f-9b02-892b3cd6bcf0.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:      
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions: 
+      id-token: write #This is required for requesting the OIDC JWT Token
+      contents: read #Required when GH token is used to authenticate with private repo
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.HOMELISTSHELPERAPP202405161505_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.HOMELISTSHELPERAPP202405161505_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.HOMELISTSHELPERAPP202405161505_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: homelistshelper20240516151858.azurecr.io
+          registryUsername: ${{ secrets.HOMELISTSHELPERAPP202405161505_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.HOMELISTSHELPERAPP202405161505_REGISTRY_PASSWORD }}
+          containerAppName: homelistshelper-app-202405161505
+          resourceGroup: HLH
+          imageToBuild: homelistshelper20240516151858.azurecr.io/homelistshelper-app-202405161505:${{ github.sha }}
+          _buildArgumentsKey_: |
+            _buildArgumentsValues_
+
+
